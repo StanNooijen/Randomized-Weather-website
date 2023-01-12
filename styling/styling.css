@@ -8,6 +8,12 @@
     color: white;
 }
 
+.MainContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    display: flex;
+}
+
 .DataContainer {
     margin-top: 3rem;
     justify-content: center;
@@ -17,7 +23,10 @@
     font-family: sans-serif;
 }
 
+
 #weatherData {
+    display: flex;
+    justify-content: right;
     background-color: transparent;
     border: 1px;
     border-style: solid;
@@ -29,24 +38,46 @@
     width: 5rem;
 }
 
-#Images {
-    width: 1.5rem;
-    height: auto;
+#dateData {
+    background-color: transparent;
+    border: 1px;
+    color: white;
+    border-style: solid;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    display: flex;
+    width: 5rem;
+    height: 3rem;
 }
 
-#Degrees {
-    font-size: 0.8rem;
+#RainData {
+    background-color: transparent;
+    border: 1px;
     color: white;
-    text-align: center;
+    border-style: solid;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    display: flex;
+    width: 5rem;
+    height: 3rem;
 }
 
 @media screen and (min-width: 900px) {
+    .MainContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        display: flex;
+    }
+
     .DataContainer {
         margin-top: 3rem;
         justify-content: center;
         flex-direction: row;
         display: flex;
-        scale: 1.5;
         font-family: sans-serif;
     }
 
@@ -58,46 +89,50 @@
         padding-left: 1rem;
         display: flex;
     }
-
-    #Images {
-        width: 2rem;
-        height: auto;
-    }
-
-    #Degrees {
-        font-size: 1.2rem;
-        color: white;
-        text-align: center;
-    }
 }
 
 @media screen and (min-width: 1280px) {
+    #dateData {
+        align-items: center;
+        background-color: transparent;
+        border: 1px;
+        color: white;
+        border-style: solid;
+        padding-left: 1rem;
+        display: flex;
+        width: 7rem;
+        height: 3rem;
+    }
+
+    #RainData {
+        align-items: center;
+        background-color: transparent;
+        border: 1px;
+        color: white;
+        border-style: solid;
+        padding-left: 1rem;
+        display: flex;
+        width: 7rem;
+        height: 3rem;
+    }
+
+    .MainContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        display: flex;
+    }
+
     .DataContainer {
         margin-top: 3rem;
         justify-content: center;
         flex-direction: row;
         display: flex;
-        scale: 1.5;
         font-family: sans-serif;
 
     }
 
     #weatherData {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
+        width: 7rem;
         display: flex;
-    }
-
-    #Images {
-        width: 3rem;
-        height: auto;
-    }
-
-    #Degrees {
-        font-size: 1.2rem;
-        color: white;
-        text-align: center;
     }
 }
