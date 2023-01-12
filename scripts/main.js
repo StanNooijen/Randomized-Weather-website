@@ -67,14 +67,16 @@ function CheckRain(){
     // console.log(RainCheck + " is raining?")
     if(RainCheck == true)
     {
-        Rain = Math.floor(Math.random() *(75 - 10 ) + 10)
+        Rain = Math.floor(Math.random() *(60 - 10 ) + 10);
+        RainDrop = Math.floor(Math.random() * (10 - 0.1 ) + 0.1);
     }
     else
     {
         Rain = 0;
+        RainDrop = 0;
     }
 
-    return Rain;
+    return Rain, RainDrop;
 }
 
 function getRandomDegrees(Max, Min) {
@@ -101,6 +103,7 @@ function PrintAllThings() {
     document.getElementById("Degree1").style.color = "white";
     document.getElementById("Date1").innerHTML = dates;
     document.getElementById("Rain1").innerHTML = RainPercentage + "%";
+    document.getElementById("Rain1").style.textAlign = "center";
 
     // console.log(numbers)
     // console.log(result);
